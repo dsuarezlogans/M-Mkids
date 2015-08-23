@@ -70,6 +70,9 @@
     <Compile Include="abecedario.xaml.cs">
       <DependentUpon>abecedario.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Juego1.xaml.cs">
+      <DependentUpon>Juego1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Juegos.xaml.cs">
       <DependentUpon>Juegos.xaml</DependentUpon>
     </Compile>
@@ -83,6 +86,10 @@
       <DependentUpon>vocales.xaml</DependentUpon>
     </Compile>
     <Page Include="abecedario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Juego1.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
