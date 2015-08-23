@@ -1,0 +1,42 @@
+﻿<Controls:MetroWindow x:Class="MMKids.abecedario"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+               xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
+Name="vtabec"
+        Title="abecedario" Height="800" Width="900" WindowTitleBrush="#FF009587" Foreground="#FFFBF5F5">
+    <Grid>
+        <Grid.Background>
+            <RadialGradientBrush>
+                <GradientStop Color="#FFCFDCDC" Offset="0"/>
+                <GradientStop Color="#FF33E0E0" Offset="1"/>
+            </RadialGradientBrush>
+        </Grid.Background>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="35,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/A.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="160,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/B.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="265,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/C.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="495,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/E.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="395,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/D.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="615,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/F.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="733,32,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/G.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="35,155,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/H.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="151,155,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/I.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="265,155,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/J.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="384,155,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/K.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="495,155,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/L.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="631,146,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/M.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="756,146,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/N.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="35,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/O.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="140,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/P.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="265,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/Q.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="365,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/R.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="480,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/S.png"/>
+        <Image HorizontalAlignment="Left" Height="111" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="615,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/T.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="733,284,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/U.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="35,398,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/V.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="151,411,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/W.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="281,411,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/X.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="381,406,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/Y.png"/>
+        <Image HorizontalAlignment="Left" Height="100" MouseEnter="Image_MouseEnter" MouseLeave="Image_MouseLeave" Margin="470,411,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/Z.png"/>
+
+    </Grid>
+</Controls:MetroWindow>

@@ -1,0 +1,238 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8D6A3488-F86E-4D0F-A896-4BAA11F5890D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>MMKids</RootNamespace>
+    <AssemblyName>WpfApplication1</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <ExpressionBlendVersion>12.0.41002.1</ExpressionBlendVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="MahApps.Metro">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\MahApps.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Expression.Drawing" />
+    <Reference Include="Microsoft.Expression.Effects" />
+    <Reference Include="Microsoft.Expression.Interactions" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Windows.Interactivity, Version=4.5.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\MahApps.Metro.1.1.2.0\lib\net45\System.Windows.Interactivity.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="abecedario.xaml.cs">
+      <DependentUpon>abecedario.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Juegos.xaml.cs">
+      <DependentUpon>Juegos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Lecturas.xaml.cs">
+      <DependentUpon>Lecturas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="silabas.xaml.cs">
+      <DependentUpon>silabas.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="vocales.xaml.cs">
+      <DependentUpon>vocales.xaml</DependentUpon>
+    </Compile>
+    <Page Include="abecedario.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Juegos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Lecturas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="Resources\Icons.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="silabas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Styles\ResourceDictionary1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="vocales.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+    <Resource Include="imagenes\appbar.home %282%29.png" />
+    <Resource Include="imagenes\appbar.refresh.png" />
+    <Resource Include="imagenes\jugar.png" />
+    <Resource Include="Resources\Entypo.ttf" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\WindowsIcons-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Resources\Entypo-license.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\hqdefault.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\mym3.jpg" />
+    <Resource Include="imagenes\mym 1.png" />
+    <Resource Include="imagenes\mym2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="SplashScreen1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\A.png" />
+    <Resource Include="imagenes\B.png" />
+    <Resource Include="imagenes\C.png" />
+    <Resource Include="imagenes\D.png" />
+    <Resource Include="imagenes\E.png" />
+    <Resource Include="imagenes\F.png" />
+    <Resource Include="imagenes\G.png" />
+    <Resource Include="imagenes\H.png" />
+    <Resource Include="imagenes\I.png" />
+    <Resource Include="imagenes\J.png" />
+    <Resource Include="imagenes\K.png" />
+    <Resource Include="imagenes\L.png" />
+    <Resource Include="imagenes\M.png" />
+    <Resource Include="imagenes\N.png" />
+    <Resource Include="imagenes\O.png" />
+    <Resource Include="imagenes\P.png" />
+    <Resource Include="imagenes\Q.png" />
+    <Resource Include="imagenes\R.png" />
+    <Resource Include="imagenes\S.png" />
+    <Resource Include="imagenes\T.png" />
+    <Resource Include="imagenes\U.png" />
+    <Resource Include="imagenes\V.png" />
+    <Resource Include="imagenes\W.png" />
+    <Resource Include="imagenes\X.png" />
+    <Resource Include="imagenes\Y.png" />
+    <Resource Include="imagenes\Z.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\barco.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\libros.jpeg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\espiral.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\qee1.png" />
+    <Resource Include="imagenes\qee2.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\quees.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\Sin título-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\hqdoghow - copia.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\appbar.home.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
