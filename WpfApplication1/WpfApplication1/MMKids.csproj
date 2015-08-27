@@ -79,6 +79,7 @@
     <Compile Include="Lecturas.xaml.cs">
       <DependentUpon>Lecturas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="metodos.cs" />
     <Compile Include="silabas.xaml.cs">
       <DependentUpon>silabas.xaml</DependentUpon>
     </Compile>
@@ -233,6 +234,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagenes\appbar.home.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\perro.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\gato.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

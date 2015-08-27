@@ -61,6 +61,12 @@ namespace MMKids
             Juegos jg = new Juegos();
             jg.vtjugar.Show();
         }
+
+        private void image5_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            Juego1 j1 = new Juego1();
+            j1.Show();
+        }
       
         
     }
