@@ -120,3 +120,4 @@ C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\r
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\zh-Hans\Microsoft.Expression.Interactions.resources.dll
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\zh-Hant\Microsoft.Expression.Interactions.resources.dll
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\MMKids.csprojResolveAssemblyReference.cache
+C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\imagenes\pizarra.jpg

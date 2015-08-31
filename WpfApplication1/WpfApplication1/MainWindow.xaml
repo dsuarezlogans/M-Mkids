@@ -139,6 +139,16 @@
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="JugarLeave"/>
+                <VisualState x:Name="Numeros">
+                	<Storyboard>
+                		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="numeros">
+                			<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="1.496"/>
+                		</DoubleAnimationUsingKeyFrames>
+                		<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="numeros">
+                			<EasingDoubleKeyFrame KeyTime="0:0:0.4" Value="91.791"/>
+                		</DoubleAnimationUsingKeyFrames>
+                	</Storyboard>
+                </VisualState>
             </VisualStateGroup>
             <VisualStateGroup x:Name="VocalesVentana">
                 <VisualStateGroup.Transitions>
@@ -239,11 +249,6 @@
                             <EasingDoubleKeyFrame KeyTime="0:0:2.7" Value="200"/>
                             <EasingDoubleKeyFrame KeyTime="0:0:2.9" Value="150"/>
                         </DoubleAnimationUsingKeyFrames>
-                        <ColorAnimationUsingKeyFrames Storyboard.TargetProperty="(Panel.Background).(SolidColorBrush.Color)" Storyboard.TargetName="vistaVocales">
-                            <EasingColorKeyFrame KeyTime="0" Value="#FFE8E4E4"/>
-                            <EasingColorKeyFrame KeyTime="0:0:0.2" Value="#00E8E4E4"/>
-                            <EasingColorKeyFrame KeyTime="0:0:0.4" Value="#FFE8E4E4"/>
-                        </ColorAnimationUsingKeyFrames>
                     </Storyboard>
                 </VisualState>
                 <VisualState x:Name="Defecto">
@@ -632,7 +637,7 @@
             </ed:RegularPolygon>
 
         </Grid>
-        <Grid x:Name="silabas" Margin="10,264,479,236" RenderTransformOrigin="0.5,0.5">
+        <Grid x:Name="silabas" Margin="10,264,479,236" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="silabas_MouseLeftButtonDown">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeave">
                     <ei:GoToStateAction StateName="Default" UseTransitions="False"/>
@@ -706,7 +711,7 @@
             </ed:RegularPolygon>
 
         </Grid>
-        <Grid x:Name="lectura" Margin="10,344,479,156" RenderTransformOrigin="0.5,0.5">
+        <Grid x:Name="lectura" Margin="10,344,479,156" RenderTransformOrigin="0.5,0.5" MouseLeftButtonDown="lectura_MouseLeftButtonDown">
             <i:Interaction.Triggers>
                 <i:EventTrigger EventName="MouseLeave">
                     <ei:GoToStateAction StateName="Default" UseTransitions="False"/>
@@ -780,7 +785,118 @@
             </ed:RegularPolygon>
 
         </Grid>
-        <Grid x:Name="vistaVocales" Margin="0" Background="#FFE8E4E4" Visibility="Collapsed">
+        <Grid x:Name="numeros" Margin="10,422,479,78" RenderTransformOrigin="0.5,0.5">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseLeave">
+                    <ei:GoToStateAction StateName="Default" UseTransitions="False"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseEnter">
+                    <ei:GoToStateAction StateName="Numeros" UseTransitions="False"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Grid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Grid.RenderTransform>
+
+            <ed:RegularPolygon InnerRadius="1" Margin="0,11.441,-0.333,13.559" PointCount="3" RenderTransformOrigin="0.5,0.5" Stroke="White" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="0" StrokeLineJoin="Round" StrokeDashOffset="88" HorizontalAlignment="Right" Width="62">
+                <ed:RegularPolygon.Fill>
+                    <LinearGradientBrush EndPoint="0.89,0.627" StartPoint="0.11,0.373">
+                        <GradientStop Color="#EE000000" Offset="0"/>
+                        <GradientStop Color="#FFF14E34" Offset="0.276"/>
+                    </LinearGradientBrush>
+                </ed:RegularPolygon.Fill>
+                <ed:RegularPolygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ed:RegularPolygon.RenderTransform>
+            </ed:RegularPolygon>
+            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,0">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#75000000" Offset="1"/>
+                        <GradientStop Color="#FFF14E34" Offset="0.872"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,10">
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#75000000"/>
+                        <GradientStop Color="#FFF14E34" Offset="0.156"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Rectangle Fill="#FF3DE06A" Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,0" Visibility="Hidden"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Right" Height="75" Margin="0,0,58.833,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Right" Height="75" Margin="0,0,75.833,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
+            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="27,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
+            <Label x:Name="label5" Content="NUMEROS" HorizontalAlignment="Right" Margin="0,10,134.389,22.001" FontFamily="AbcKids" FontSize="32"/>
+            <ed:RegularPolygon InnerRadius="1" Margin="0,21.774,9,12.226" PointCount="3" RenderTransformOrigin="0.5,0.5" Stroke="White" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="0" StrokeLineJoin="Round" StrokeDashOffset="88" HorizontalAlignment="Right" Width="53">
+                <ed:RegularPolygon.Fill>
+                    <LinearGradientBrush EndPoint="0.868,0.295" StartPoint="0.132,0.705">
+                        <GradientStop Color="#3B000000" Offset="1"/>
+                        <GradientStop Color="#FFF14E34" Offset="0.627"/>
+                    </LinearGradientBrush>
+                </ed:RegularPolygon.Fill>
+                <ed:RegularPolygon.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform Angle="90"/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </ed:RegularPolygon.RenderTransform>
+            </ed:RegularPolygon>
+
+        </Grid>
+        <Grid x:Name="jugar" Margin="579.326,0,62.167,384.245">
+            <i:Interaction.Triggers>
+                <i:EventTrigger EventName="MouseEnter">
+                    <ei:GoToStateAction StateName="JugarEnter" UseTransitions="False"/>
+                </i:EventTrigger>
+                <i:EventTrigger EventName="MouseLeave">
+                    <ei:GoToStateAction StateName="JugarLeave" UseTransitions="False"/>
+                </i:EventTrigger>
+            </i:Interaction.Triggers>
+            <Image x:Name="image5" Source="imagenes/jugar.png" RenderTransformOrigin="0.5,0.5" Margin="0,-24.676,0,50.009" HorizontalAlignment="Left" Width="171.611" Stretch="Fill" MouseLeftButtonDown="image5_MouseLeftButtonDown">
+                <Image.Effect>
+                    <DropShadowEffect BlurRadius="0" Direction="-365" Opacity="0"/>
+                </Image.Effect>
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+            <Label x:Name="label4" Content="JUGAR" HorizontalAlignment="Left" Margin="57.484,115.068,0,0" VerticalAlignment="Top" FontFamily="AbcKids" FontSize="32" Foreground="#FFC9FF39" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
+                <Label.RenderTransform>
+                    <TransformGroup>
+                        <ScaleTransform/>
+                        <SkewTransform/>
+                        <RotateTransform/>
+                        <TranslateTransform/>
+                    </TransformGroup>
+                </Label.RenderTransform>
+            </Label>
+
+        </Grid>
+        <Grid x:Name="vistaVocales" Margin="0" Visibility="Collapsed">
+        	<Grid.Background>
+        		<ImageBrush ImageSource="pack://siteoforigin:,,,/imagenes/pizarra.jpg"/>
+        	</Grid.Background>
             <Image x:Name="image" HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="150" Source="imagenes/A.png" Margin="54,66,0,0" Visibility="Collapsed">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseEnter">
@@ -841,7 +957,10 @@
             </Button>
 
         </Grid>
-        <Grid x:Name="vistaAbc" Margin="0" Background="#FFE8E4E4" Visibility="Collapsed">
+        <Grid x:Name="vistaAbc" Margin="0" Visibility="Collapsed">
+        	<Grid.Background>
+        		<ImageBrush ImageSource="pack://siteoforigin:,,,/imagenes/pizarra.jpg"/>
+        	</Grid.Background>
             <Image x:Name="image6" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Source="imagenes/A.png" Margin="71.5,77.5,0,0">
                 <i:Interaction.Triggers>
                     <i:EventTrigger EventName="MouseEnter">
@@ -921,114 +1040,6 @@
                 </i:Interaction.Triggers>
                 <Image Height="40" Source="imagenes/appbar.home (2).png" Stretch="Fill" Width="40"/>
             </Button>
-
-        </Grid>
-        <Grid Margin="579.326,0,62.167,384.245">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseEnter">
-                    <ei:GoToStateAction StateName="JugarEnter" UseTransitions="False"/>
-                </i:EventTrigger>
-                <i:EventTrigger EventName="MouseLeave">
-                    <ei:GoToStateAction StateName="JugarLeave" UseTransitions="False"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-            <Image x:Name="image5" Source="imagenes/jugar.png" RenderTransformOrigin="0.5,0.5" Margin="0,-24.676,0,50.009" HorizontalAlignment="Left" Width="171.611" Stretch="Fill" MouseLeftButtonDown="image5_MouseLeftButtonDown">
-                <Image.Effect>
-                    <DropShadowEffect BlurRadius="0" Direction="-365" Opacity="0"/>
-                </Image.Effect>
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            <Label x:Name="label4" Content="JUGAR" HorizontalAlignment="Left" Margin="57.484,115.068,0,0" VerticalAlignment="Top" FontFamily="AbcKids" FontSize="32" Foreground="#FFC9FF39" RenderTransformOrigin="0.5,0.5" Background="{x:Null}">
-                <Label.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </Label.RenderTransform>
-            </Label>
-
-        </Grid>
-        <Grid x:Name="lectura_Copy" Margin="10,444,479,56" RenderTransformOrigin="0.5,0.5">
-            <i:Interaction.Triggers>
-                <i:EventTrigger EventName="MouseLeave">
-                    <ei:GoToStateAction StateName="Default" UseTransitions="False"/>
-                </i:EventTrigger>
-                <i:EventTrigger EventName="MouseEnter">
-                    <ei:GoToStateAction StateName="Lectura" UseTransitions="False"/>
-                </i:EventTrigger>
-            </i:Interaction.Triggers>
-            <Grid.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </Grid.RenderTransform>
-
-            <ed:RegularPolygon InnerRadius="1" Margin="0,11.441,-0.333,13.559" PointCount="3" RenderTransformOrigin="0.5,0.5" Stroke="White" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="0" StrokeLineJoin="Round" StrokeDashOffset="88" HorizontalAlignment="Right" Width="62">
-                <ed:RegularPolygon.Fill>
-                    <LinearGradientBrush EndPoint="0.89,0.627" StartPoint="0.11,0.373">
-                        <GradientStop Color="#EE000000" Offset="0"/>
-                        <GradientStop Color="#FFD1E03D" Offset="0.276"/>
-                    </LinearGradientBrush>
-                </ed:RegularPolygon.Fill>
-                <ed:RegularPolygon.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ed:RegularPolygon.RenderTransform>
-            </ed:RegularPolygon>
-            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,0">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#75000000" Offset="1"/>
-                        <GradientStop Color="#FFD1E03D" Offset="0.872"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,10">
-                <Rectangle.Fill>
-                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-                        <GradientStop Color="#75000000"/>
-                        <GradientStop Color="#FFD1E03D" Offset="0.156"/>
-                    </LinearGradientBrush>
-                </Rectangle.Fill>
-            </Rectangle>
-            <Rectangle Fill="#FF3DE06A" Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,0" Visibility="Hidden"/>
-            <Rectangle Fill="Black" HorizontalAlignment="Right" Height="75" Margin="0,0,58.833,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
-            <Rectangle Fill="Black" HorizontalAlignment="Right" Height="75" Margin="0,0,75.833,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
-            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
-            <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="27,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
-            <Label x:Name="label5" Content="NUMEROS" HorizontalAlignment="Right" Margin="0,10,134.389,22.001" FontFamily="AbcKids" FontSize="32"/>
-            <ed:RegularPolygon InnerRadius="1" Margin="0,21.774,9,12.226" PointCount="3" RenderTransformOrigin="0.5,0.5" Stroke="White" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="0" StrokeLineJoin="Round" StrokeDashOffset="88" HorizontalAlignment="Right" Width="53">
-                <ed:RegularPolygon.Fill>
-                    <LinearGradientBrush EndPoint="0.868,0.295" StartPoint="0.132,0.705">
-                        <GradientStop Color="#3B000000" Offset="1"/>
-                        <GradientStop Color="#FFD1E03D" Offset="0.627"/>
-                    </LinearGradientBrush>
-                </ed:RegularPolygon.Fill>
-                <ed:RegularPolygon.RenderTransform>
-                    <TransformGroup>
-                        <ScaleTransform/>
-                        <SkewTransform/>
-                        <RotateTransform Angle="90"/>
-                        <TranslateTransform/>
-                    </TransformGroup>
-                </ed:RegularPolygon.RenderTransform>
-            </ed:RegularPolygon>
 
         </Grid>
 

@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
                         xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="Juego1" Height="513.307" Width="824.897">
+	<Grid>
     <Canvas x:Name="LayoutRoot">
         <Image x:Name="imgprin" Height="270" Canvas.Left="187" Canvas.Top="25" Width="460"/>
         <Label x:Name="lb1" Content="___________________________" Height="26" Canvas.Left="45" Canvas.Top="353" Width="72" Visibility="Hidden"/>
@@ -13,13 +14,16 @@
         <Label x:Name="lb6" Content="___________________________" Height="26" Canvas.Left="505" Canvas.Top="353" Width="72" Visibility="Hidden"/>
         <Label x:Name="lb7" Content="___________________________" Height="26" Canvas.Left="599" Canvas.Top="353" Width="72" Visibility="Hidden"/>
         <Label x:Name="lb8" Content="___________________________" Height="26" Canvas.Left="691" Canvas.Top="353" Width="72" Visibility="Hidden"/>
-        <Button x:Name="bt1" Content="Button" Height="57" Canvas.Left="45" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt2" Content="Button" Height="57" Canvas.Left="146" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt3" Content="Button" Height="57" Canvas.Left="232" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt4" Content="Button" Height="57" Canvas.Left="326" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt5" Content="Button" Height="57" Canvas.Left="422" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt6" Content="Button" Height="57" Canvas.Left="510" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt7" Content="Button" Height="57" Canvas.Left="607" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
-        <Button x:Name="bt8" Content="Button" Height="57" Canvas.Left="695" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click"/>
+        <Button x:Name="bt1" Content="Button" Height="57" Canvas.Left="45" Canvas.Top="402" Width="63" Click="bt1_Click" Background="{x:Null}" BorderBrush="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red" Visibility="Collapsed"/>
+        <Button x:Name="bt2" Content="Button" Height="57" Canvas.Left="146" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt3" Content="Button" Height="57" Canvas.Left="232" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt4" Content="Button" Height="57" Canvas.Left="326" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt5" Content="Button" Height="57" Canvas.Left="422" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt6" Content="Button" Height="57" Canvas.Left="510" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt7" Content="Button" Height="57" Canvas.Left="607" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
+        <Button x:Name="bt8" Content="Button" Height="57" Canvas.Left="695" Canvas.Top="402" Width="63" Visibility="Hidden" Click="bt1_Click" BorderBrush="{x:Null}" Background="{x:Null}" FontSize="40" FontFamily="AbcKids" Foreground="Red"/>
     </Canvas>
+    <Grid x:Name="Juego2" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100"/>
+    <Grid x:Name="OpcionesJuegos" HorizontalAlignment="Left" Height="74.627" VerticalAlignment="Top" Width="816.897"/>
+	</Grid>
 </Controls:MetroWindow>

@@ -24,17 +24,13 @@ namespace MMKids
         public string imagen = "",descomp="";
         int c = 0;
         public Juego1()
-        {InitializeComponent();
-        reseteo();
+        {
+            InitializeComponent();
+            reseteo();
             asignar();
-            botones();
-              
+            botones();              
         }
        
-        
-
-
-
         public void reseteo()
         {
             posicion[1, 0] = new metodos(false, 402, 45,"");

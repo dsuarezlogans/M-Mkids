@@ -67,6 +67,18 @@ namespace MMKids
             Juego1 j1 = new Juego1();
             j1.Show();
         }
+
+        private void silabas_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+        	silabas sl = new silabas();
+            sl.vtsilab.Show();
+        }
+
+        private void lectura_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)
+        {
+        	Lecturas lc = new Lecturas();
+            lc.vtlec.Show();
+        }
       
         
     }
