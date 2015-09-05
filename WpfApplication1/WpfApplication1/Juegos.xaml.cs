@@ -30,9 +30,29 @@ namespace MMKids
 
         }
 
-        private void Image_MouseEnter(object sender, MouseEventArgs e)
+     
+        private void Button_Click(object sender, RoutedEventArgs e)
         {
-           
+            Juego1 j1 = new Juego1();
+            j1.Show();
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            esconder();
+            Button jc = (Button)sender;
+            if(jc.Name.ToString()=="bj2")
+                juego2.Visibility = System.Windows.Visibility.Visible;
+            else if(jc.Name.ToString()=="bj3")
+            juego3.Visibility = System.Windows.Visibility.Visible;
+
+
+        }
+
+        public void esconder()
+        {
+            juego2.Visibility = System.Windows.Visibility.Collapsed;
+            juego3.Visibility = System.Windows.Visibility.Collapsed;
         }
     }
 }

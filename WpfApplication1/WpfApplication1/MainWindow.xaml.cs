@@ -56,16 +56,11 @@ namespace MMKids
 
         }
 
-        private void btjug_Click(object sender, RoutedEventArgs e)
-        {
-            Juegos jg = new Juegos();
-            jg.vtjugar.Show();
-        }
 
         private void image5_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
-            Juego1 j1 = new Juego1();
-            j1.Show();
+            Juegos jg = new Juegos();
+            jg.vtjugar.Show();
         }
 
         private void silabas_MouseLeftButtonDown(object sender, System.Windows.Input.MouseButtonEventArgs e)

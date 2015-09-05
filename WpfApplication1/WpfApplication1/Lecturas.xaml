@@ -33,6 +33,7 @@
             <Label Content="La toruga y el conejo" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
             <Label Content="Pinocho el niño de madera" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
         </ListView>
+        <Image HorizontalAlignment="Left" Height="100" Margin="146,142.5,0,0" VerticalAlignment="Top" Width="100"/>
 
     </Grid>
 </Controls:MetroWindow>

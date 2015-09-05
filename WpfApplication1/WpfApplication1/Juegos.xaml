@@ -7,36 +7,19 @@
         <ImageBrush ImageSource="imagenes/espiral.jpg"/>
     </Controls:MetroWindow.Background>
 
-    <Grid MouseEnter="Grid_MouseEnter">
-        <Button Content="" HorizontalAlignment="Left" Margin="99,119,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="380,45,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="657,119,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="99,397,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="380,452,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
-        <Button Content="" HorizontalAlignment="Left" Margin="677,397,0,0" VerticalAlignment="Top" Width="179" Height="159" BorderBrush="{x:Null}">
-            <Button.Background>
-                <ImageBrush ImageSource="imagenes/quees.jpg"/>
-            </Button.Background>
-        </Button>
+    <Grid HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="879">
+
+        <Grid MouseEnter="Grid_MouseEnter">
+            <Button Content="Button" HorizontalAlignment="Left" Margin="50,0,0,0" VerticalAlignment="Top" Width="127" Height="100" Click="Button_Click"/>
+            <Button Name="bj2" Content="Button" HorizontalAlignment="Left" Margin="273,0,0,0" VerticalAlignment="Top" Width="127" Height="100" Click="Button_Click_1"/>
+            <Button Name="bj3" Content="Button" HorizontalAlignment="Left" Margin="490,0,0,0" VerticalAlignment="Top" Width="127" Height="100" Click="Button_Click_1"/>
+            <Button Content="Button" HorizontalAlignment="Left" Margin="686,0,0,0" VerticalAlignment="Top" Width="127" Height="100"/>
+        </Grid>
+        <Grid Name="juego2" HorizontalAlignment="Left" Height="516" VerticalAlignment="Top" Width="879" Margin="0,105,0,-521" Background="#FF38EA1C" Visibility="Collapsed"/>
+        <Grid Name="juego3" HorizontalAlignment="Left" Height="516" VerticalAlignment="Top" Width="879" Margin="0,105,0,-521" Background="#FFE11CEA" Visibility="Collapsed"/>
+
+
     </Grid>
+
+
 </Controls:MetroWindow>
