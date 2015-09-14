@@ -257,6 +257,15 @@
   <ItemGroup>
     <Resource Include="imagenes\piece600altfull.jpg" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\ll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\ch.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\ñi.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

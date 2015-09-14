@@ -4,6 +4,28 @@
                        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="numeros" Height="535.622" Width="762.232">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/imagenes/pizarra.jpg"/>
+        </Grid.Background>
+        <Label Content="1" HorizontalAlignment="Left" Margin="80,43,0,0" VerticalAlignment="Top" Height="88" Width="40" Foreground="#FFD114FB" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="2" HorizontalAlignment="Left" Margin="207,95,0,0" VerticalAlignment="Top" Height="88" Width="40" Foreground="#FFFBD114" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="3" HorizontalAlignment="Left" Margin="331,43,0,0" VerticalAlignment="Top" Height="88" Width="40" Foreground="#FF14FBA7" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="4" HorizontalAlignment="Left" Margin="450,95,0,0" VerticalAlignment="Top" Height="88" Width="60" Foreground="#FFFB1414" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="5" HorizontalAlignment="Left" Margin="579,61,0,0" VerticalAlignment="Top" Height="88" Width="60" Foreground="#FF14FB14" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="6" HorizontalAlignment="Left" Margin="117,286,0,0" VerticalAlignment="Top" Height="88" Width="60" Foreground="#FF1492FB" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="7" HorizontalAlignment="Left" Margin="276,322,0,0" VerticalAlignment="Top" Height="88" Width="60" Foreground="#FF8714FB" FontFamily="AbcKids" FontSize="72"/>
+        <Label Content="8" HorizontalAlignment="Left" Margin="397,270,0,0" VerticalAlignment="Top" Height="88" Width="60" Foreground="#FFFB7314" FontFamily="AbcKids" FontSize="72" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="7.057"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <Label Content="9" HorizontalAlignment="Left" Margin="539,342,0,0" VerticalAlignment="Top" Height="88" Width="40"  FontFamily="AbcKids" FontSize="72" Background="{x:Null}" Foreground="#FF1A11DC"/>
+        <Label Content="0" HorizontalAlignment="Left" Margin="635,286,0,0" VerticalAlignment="Top" Height="88" Width="60"  FontFamily="AbcKids" FontSize="72" Background="{x:Null}" Foreground="White"/>
 
     </Grid>
 </Controls:MetroWindow>
