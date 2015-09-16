@@ -58,10 +58,10 @@ C:\Users\JoanYanitA\Source\Workspaces\Tesis MM final\WpfApplication1\WpfApplicat
 C:\Users\JoanYanitA\Source\Workspaces\Tesis MM final\WpfApplication1\WpfApplication1\bin\Debug\zh-Hans\Microsoft.Expression.Effects.resources.dll
 C:\Users\JoanYanitA\Source\Workspaces\Tesis MM final\WpfApplication1\WpfApplication1\bin\Debug\zh-Hant\Microsoft.Expression.Effects.resources.dll
 C:\Users\JoanYanitA\Source\Workspaces\Tesis MM final\WpfApplication1\WpfApplication1\obj\Debug\MMKids.csprojResolveAssemblyReference.cache
-C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\imagenes\pizarra.jpg
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\piece600altfull.jpg
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe.config
+C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.exe
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\WpfApplication1.pdb
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\MahApps.Metro.dll
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\bin\Debug\Microsoft.Expression.Drawing.dll
@@ -102,6 +102,7 @@ C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\J
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Juegos.baml
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Lecturas.baml
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.baml
+C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\numeros.baml
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Resources\Icons.baml
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\silabas.baml
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Styles\ResourceDictionary1.baml
@@ -112,6 +113,7 @@ C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\J
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Juegos.g.cs
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\Lecturas.g.cs
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\MainWindow.g.cs
+C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\numeros.g.cs
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\silabas.g.cs
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\vocales.g.cs
 C:\Users\RSMAPP\Source\Repos\M-Mkids\WpfApplication1\WpfApplication1\obj\Debug\App.g.cs

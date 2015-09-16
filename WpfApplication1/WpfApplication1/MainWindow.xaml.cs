@@ -74,6 +74,13 @@ namespace MMKids
         	Lecturas lc = new Lecturas();
             lc.vtlec.Show();
         }
+
+        private void Rectangle_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        {
+            numeros num = new numeros();
+            num.Show();
+        }
+
       
         
     }

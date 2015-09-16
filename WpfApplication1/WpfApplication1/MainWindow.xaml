@@ -827,7 +827,7 @@
                     </LinearGradientBrush>
                 </Rectangle.Fill>
             </Rectangle>
-            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,10">
+            <Rectangle Stroke="White" StrokeThickness="0" RadiusX="5" RadiusY="5" Margin="0,0,53.5,10" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown">
                 <Rectangle.Fill>
                     <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
                         <GradientStop Color="#75000000"/>
@@ -840,7 +840,7 @@
             <Rectangle Fill="Black" HorizontalAlignment="Right" Height="75" Margin="0,0,75.833,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
             <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="10,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
             <Rectangle Fill="Black" HorizontalAlignment="Left" Height="75" Margin="27,0,0,0" StrokeStartLineCap="Round" StrokeEndLineCap="Round" Stroke="White" StrokeThickness="0" StrokeLineJoin="Round" VerticalAlignment="Top" Width="12"/>
-            <Label x:Name="label5" Content="NUMEROS" HorizontalAlignment="Right" Margin="0,10,134.389,22.001" FontFamily="AbcKids" FontSize="32"/>
+            <Label x:Name="label5" Content="NUMEROS" HorizontalAlignment="Right" Margin="0,10,134.389,22.001" FontFamily="AbcKids" FontSize="32" MouseLeftButtonDown="Rectangle_MouseLeftButtonDown"/>
             <ed:RegularPolygon InnerRadius="1" Margin="0,21.774,9,12.226" PointCount="3" RenderTransformOrigin="0.5,0.5" Stroke="White" StrokeStartLineCap="Round" StrokeEndLineCap="Round" StrokeDashCap="Round" StrokeThickness="0" StrokeLineJoin="Round" StrokeDashOffset="88" HorizontalAlignment="Right" Width="53">
                 <ed:RegularPolygon.Fill>
                     <LinearGradientBrush EndPoint="0.868,0.295" StartPoint="0.132,0.705">

@@ -9,6 +9,9 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
+using MahApps.Metro.Behaviours;
+using MahApps.Metro.Controls;
+using MahApps.Metro.Converters;
 using Microsoft.Expression.Interactivity.Core;
 using Microsoft.Expression.Interactivity.Input;
 using Microsoft.Expression.Interactivity.Layout;

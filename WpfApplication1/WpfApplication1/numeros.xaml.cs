@@ -19,9 +19,20 @@ namespace MMKids
     /// </summary>
     public partial class numeros : MetroWindow
     {
+        vocales vc = new vocales();
         public numeros()
         {
             InitializeComponent();
+        }
+
+        private void in1_MouseEnter(object sender, MouseEventArgs e)
+        {
+            vc.voca_MouseEnter(sender, e);
+        }
+
+        private void in1_MouseLeave(object sender, MouseEventArgs e)
+        {
+            vc.voca_MouseLeave(sender, e);
         }
     }
 }

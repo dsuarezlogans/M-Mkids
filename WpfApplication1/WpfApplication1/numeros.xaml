@@ -4,6 +4,19 @@
                        xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
         Title="numeros" Height="535.622" Width="762.232">
     <Grid>
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://siteoforigin:,,,/imagenes/pizarra.jpg"/>
+        </Grid.Background>
+        <Image x:Name="in1" HorizontalAlignment="Left" Height="108" Margin="94,56,0,0" VerticalAlignment="Top" Width="81" Source="imagenes/one.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in2" HorizontalAlignment="Left" Height="100" Margin="225,107,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/two.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in3" HorizontalAlignment="Left" Height="100" Margin="350,64,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/three.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in4" HorizontalAlignment="Left" Height="100" Margin="479,128,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/four.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in5" HorizontalAlignment="Left" Height="100" Margin="601,74,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/five.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in6" HorizontalAlignment="Left" Height="100" Margin="75,256,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/six.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in7" HorizontalAlignment="Left" Height="100" Margin="244,283,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/seven.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in8" HorizontalAlignment="Left" Height="100" Margin="370,245,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/eight.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in9" HorizontalAlignment="Left" Height="100" Margin="496,283,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/nine.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
+        <Image x:Name="in0" HorizontalAlignment="Left" Height="100" Margin="601,256,0,0" VerticalAlignment="Top" Width="100" Source="imagenes/zero.png" MouseEnter="in1_MouseEnter" MouseLeave="in1_MouseLeave"/>
 
     </Grid>
 </Controls:MetroWindow>
