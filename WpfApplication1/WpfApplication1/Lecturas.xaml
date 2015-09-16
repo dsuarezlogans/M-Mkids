@@ -1,39 +1,484 @@
-﻿<Controls:MetroWindow x:Name="vtlec" x:Class="MMKids.Lecturas"
+﻿<Controls:MetroWindow
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
           xmlns:Controls="clr-namespace:MahApps.Metro.Controls;assembly=MahApps.Metro"
-        Title="Lecturas" Height="744" Width="926" Background="{x:Null}" >
-    <Grid>
-    	<Grid.Background>
-    		<ImageBrush ImageSource="imagenes/piece600altfull.jpg"/>
-    	</Grid.Background>
-        <ListView HorizontalAlignment="Left" Height="242" Margin="193,198,0,0" VerticalAlignment="Top" Width="550" Visibility="Collapsed">
-        	<ListView.Background>
-        		<RadialGradientBrush>
-        			<GradientStop Color="#FF2D19F3" Offset="1"/>
-        			<GradientStop Color="#FF00B9F0"/>
-        		</RadialGradientBrush>
-        	</ListView.Background>
-            <ListView.Foreground>
-                <RadialGradientBrush>
-                    <GradientStop Color="Black" Offset="0"/>
-                    <GradientStop Color="#FF9EA2D1" Offset="1"/>
-                </RadialGradientBrush>
-            </ListView.Foreground>
-            <ListView.View>
-                <GridView>
-                    <GridViewColumn/>
-                </GridView>
-            </ListView.View>
-            <Label Content="Tio Tigre y Tio Conejo" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
-            <Label Content="Los Tres cerditos y El Lobo" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
-            <Label HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White">
-                <Label Content="Los Tres cerditos y El Lobo" HorizontalAlignment="Left" Width="530" FontSize="36" Foreground="White"/>
-            </Label>
-            <Label Content="La toruga y el conejo" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
-            <Label Content="Pinocho el niño de madera" HorizontalAlignment="Left" Margin="10,0,-530,0" Width="530" FontSize="36" Foreground="White"/>
-        </ListView>
-        <Image HorizontalAlignment="Left" Height="100" Margin="146,142.5,0,0" VerticalAlignment="Top" Width="100"/>
+        xmlns:local="clr-namespace:MMKids" xmlns:i="http://schemas.microsoft.com/expression/2010/interactivity" xmlns:ei="http://schemas.microsoft.com/expression/2010/interactions" x:Name="vtlec" x:Class="MMKids.Lecturas"
+        Title="Lecturas" Height="602" Width="865" Background="{x:Null}" WindowStartupLocation="CenterScreen" >
+	<Controls:MetroWindow.Resources>
+		<Storyboard x:Key="LecturaConejito">
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Width)" Storyboard.TargetName="LibroConejito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="410"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(FrameworkElement.Height)" Storyboard.TargetName="LibroConejito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="460"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroConejito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-154.871"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroConejito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-64.946"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginasConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroConejito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="0.848"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="DejarLibro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="3.747"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="DejarLibro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="6.245"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Hidden}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="LecturaPerro">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginasPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroPerro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-151.125"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroPerro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="103.039"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroPerro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="3.157"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="LibroPerro">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.491"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Hidden}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="LecturaMonstruos">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginasMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroMonstruos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-307.245"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroMonstruos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="81.808"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroMonstruos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="3.135"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="LibroMonstruos">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.241"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="LecturaPizarra">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginaPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroPizarra">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-9.367"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroPizarra">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-114.905"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroPizarra">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="3.055"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="LibroPizarra">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.187"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="LecturaTio">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginaTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroTio">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-199.21"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroTio">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-111.157"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroTio">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.351"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="LibroTio">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.374"/>
+			</DoubleAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+		</Storyboard>
+		<Storyboard x:Key="LecturaPatito">
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="PaginasPatito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="DejarLibro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Visible}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroConejito">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPerro">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroMonstruos">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroPizarra">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LibroTio">
+				<DiscreteObjectKeyFrame KeyTime="0:0:0.2" Value="{x:Static Visibility.Collapsed}"/>
+			</ObjectAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.X)" Storyboard.TargetName="LibroPatito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-311.616"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[3].(TranslateTransform.Y)" Storyboard.TargetName="LibroPatito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="-93.672"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleX)" Storyboard.TargetName="LibroPatito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="3.123"/>
+			</DoubleAnimationUsingKeyFrames>
+			<DoubleAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.RenderTransform).(TransformGroup.Children)[0].(ScaleTransform.ScaleY)" Storyboard.TargetName="LibroPatito">
+				<EasingDoubleKeyFrame KeyTime="0:0:0.2" Value="2.343"/>
+			</DoubleAnimationUsingKeyFrames>
+		</Storyboard>
+	</Controls:MetroWindow.Resources>
+	<Controls:MetroWindow.Triggers>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroConejito">
+			<StopStoryboard BeginStoryboardName="LecturaConejito_BeginStoryboard"/>
+			<BeginStoryboard x:Name="LecturaConejito_BeginStoryboard" Storyboard="{StaticResource LecturaConejito}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="ButtonBase.Click" SourceName="DejarLibro">			
+			<RemoveStoryboard BeginStoryboardName="LecturaConejito_BeginStoryboard"/>			
+			<RemoveStoryboard BeginStoryboardName="LecturaPerro_BeginStoryboard"/>
+			<RemoveStoryboard BeginStoryboardName="LecturaMonstruos_BeginStoryboard"/>
+			<RemoveStoryboard BeginStoryboardName="LecturaPizarra_BeginStoryboard"/>
+			<RemoveStoryboard BeginStoryboardName="LecturaTio_BeginStoryboard"/>
+			<RemoveStoryboard BeginStoryboardName="LecturaPatito_BeginStoryboard1"/>			
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroPerro">
+			<BeginStoryboard x:Name="LecturaPerro_BeginStoryboard" Storyboard="{StaticResource LecturaPerro}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroMonstruos">
+			<BeginStoryboard x:Name="LecturaMonstruos_BeginStoryboard" Storyboard="{StaticResource LecturaMonstruos}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroPizarra">
+			<BeginStoryboard x:Name="LecturaPizarra_BeginStoryboard" Storyboard="{StaticResource LecturaPizarra}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroTio">
+			<BeginStoryboard x:Name="LecturaTio_BeginStoryboard" Storyboard="{StaticResource LecturaTio}"/>
+		</EventTrigger>
+		<EventTrigger RoutedEvent="Control.MouseDoubleClick" SourceName="LibroPatito">
+			<BeginStoryboard x:Name="LecturaPatito_BeginStoryboard1" Storyboard="{StaticResource LecturaPatito}"/>
+		</EventTrigger>		
+	</Controls:MetroWindow.Triggers>
+	<Grid>
+		<VisualStateManager.VisualStateGroups>
+			<VisualStateGroup x:Name="VisualStateGroup">
+				<VisualState x:Name="VisualState"/>
+			</VisualStateGroup>
+		</VisualStateManager.VisualStateGroups>
+		<Grid.Background>
+			<ImageBrush ImageSource="imagenes/piece600altfull.jpg"/>
+		</Grid.Background>
+		<local:UserControl1 x:Name="LibroConejito" HorizontalAlignment="Left" Margin="132.137,111.385,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/conejitofeo.jpg"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Button x:Name="DejarLibro" Content="Dejar Libro" Height="24.979" Margin="0,515.767,614.863,0" VerticalAlignment="Top" HorizontalAlignment="Right" Width="113.656" RenderTransformOrigin="0.5,0.5" Visibility="Collapsed">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+		</Button>
+		<Controls:MetroAnimatedTabControl x:Name="PaginasConejito" HorizontalAlignment="Left" Margin="359.428,10,0,0" VerticalAlignment="Top" Width="487.572" Height="562" TabStripPlacement="Bottom" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,-54.484" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16"><Run Language="es-ve" Text="&#x9;"/><Run Text="Hubo una vez en un lugar una época de muchísima sequía y hambre para los animales. Un conejito muy pobre caminaba triste por el campo cuando se le apareció un mago que le entregó un saco con varias ramitas.&quot;Son mágicas, y serán aún más mágicas si sabes usarlas&quot; El conejito se moría de hambre, pero decidió no morder las ramitas pensando en darles buen uso."/><LineBreak/><Run/><Run Language="es-ve" Text=" "/><LineBreak/><Run Language="es-ve"/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Al volver a casa, encontró una ovejita muy viejita y pobre que casi no podía caminar.&quot;Dame algo, por favor&quot;, le dijo. El conejito no tenía nada salvo las ramitas, pero como eran mágicas se resistía a dárselas. Sin embargó, recordó como sus padres le enseñaron desde pequeño a compartirlo todo, así que sacó una ramita del saco y se la dio a la oveja. Al instante, la rama brilló con mil colores, mostrando su magia. El conejito siguió contrariado y contento a la vez, pensando que había dejado escapar una ramita mágica, pero que la ovejita la necesitaba más que él. Lo mismo le ocurrió con un pato ciego y un gallo cojo, de forma que al llegar a su casa sólo le quedaba una de las ramitas."/></Span><LineBreak/><Run/><Run Language="es-ve" Text=" "/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="Pág. 2">
+				<Grid Background="#FFE5E5E5">
+					<Grid.ColumnDefinitions>
+						<ColumnDefinition/>
+					</Grid.ColumnDefinitions>
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16"><Run Language="es-ve" Text="&#x9;"/><Run Foreground="#FF222222" Language="es-ve" Text="Al llegar a casa, contó la historia y su encuentro con el mago a sus papás, que se mostraron muy orgullosos por su comportamiento. Y cuando iba a sacar la ramita, llegó su hermanito pequeño, llorando por el hambre, y también se la dio a él."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" FontSize="16" FontFamily="Segoe UI" Language="es-ve" Text="En ese momento apareció el mago con gran estruendo, y preguntó al conejito ¿Dónde están las ramitas mágicas que te entregué? ¿Qué es lo que has hecho con ellas? El conejito se asustó y comenzó a excusarse, pero el mago le cortó diciendo ¿No te dije que si las usabas bien serían más mágicas? ¡Pues sal fuera y mira lo que has hecho!"/><LineBreak/><Run Foreground="#FF222222" FontSize="16" FontFamily="Segoe UI" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" FontSize="16" FontFamily="Segoe UI" Language="es-ve" Text="Y el conejito salió temblando de su casa para descubrir que a partir de sus ramitas, ¡todos los campos de alrededor se habían convertido en una maravillosa granja llena de agua y comida para todos los animales!!"/><LineBreak/><Run Foreground="#FF222222" FontSize="16" FontFamily="Segoe UI" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" FontSize="16" FontFamily="Segoe UI" Language="es-ve" Text="Y el conejito se sintió muy contento por haber obrado bien, y porque la magia de su generosidad hubiera devuelto la alegría a todos"/><LineBreak/><Run Language="es-ve"/><LineBreak/><Run/><Run Language="es-ve" Text=" "/></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
+		<local:UserControl1 x:Name="LibroPerro" HorizontalAlignment="Left" Margin="278.266,111.385,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/Elviejoperrocazador.jpg"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Controls:MetroAnimatedTabControl x:Name="PaginasPerro" HorizontalAlignment="Left" Margin="359.428,10,0,0" VerticalAlignment="Top" Width="487.572" Height="562" TabStripPlacement="Bottom" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,-54.484" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16"><Run Language="es-ve" Text="&#x9;"/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Un viejo perro cazador, que en sus días de juventud y fortaleza jamás se rindió ante ninguna bestia de la foresta, encontró en sus ancianos días un jabalí en una cacería. Y lo agarró por la oreja, pero no pudo retenerlo por la debilidad de sus dientes, de modo que el jabalí escapó."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Su amo, llegando rápidamente, se mostró muy disgustado, y groseramente reprendió al perro."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text=" El perro lo miró lastimosamente y le dijo:"/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Mi amo, mi espíritu está tan bueno como siempre, pero no puedo sobreponerme a mis flaquezas del cuerpo. Yo prefiero que me alabes por lo que he sido, y no que me maltrates por lo que ahora soy."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" FontFamily="Arial" Language="es-ve"><Run Text="Respeta siempre a tus ancianos, que aunque ya no puedan hacer de todo, dieron lo mejor de su vida para tu beneficio."/></Span><LineBreak/><Run Language="es-ve"/><LineBreak/><Run/><Run Language="es-ve" Text=" "/></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
+		<local:UserControl1 x:Name="LibroMonstruos" HorizontalAlignment="Left" Margin="433.138,111.385,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/inventormonstruos.jpg"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Controls:MetroAnimatedTabControl x:Name="PaginasMonstruos" HorizontalAlignment="Left" Margin="359.428,10,0,0" VerticalAlignment="Top" Width="487.572" Height="562" TabStripPlacement="Bottom" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Span Foreground="#FF222222" Language="es-ve"><Run Text="&#x9;Ramoncete no quería aprender a leer. Tantas letras juntas le parecía un aburrimiento enorme, y no terminaba de entender por qué todos los mayores y muchos otros niños, disfrutaban tanto con la lectura."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Él miraba las letras y no veía nada interesante, a él que tanto le gustaban las historias de monstruos y bichos terribles. Un día paseaba por la tienda de disfraces de don Mostrocho. Le encantaba aquella tienda, porque don Mostrocho era capaz de inventar los monstruos más alucinantes, y cada año tenía muchos nuevos monstruos, ¡con lo difícil que era sólo inventar uno nuevo! Aquel día el dueño de la tienda leía, y a Ramoncete le llamó la atención:"/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- ¿Por qué lee tanto? ¡Si los libros no dicen nada interesante!"/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- ¿Cómo que no? - respondió don Mostrocho."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- Pues claro, no dicen nada de monstruos ni bichos- añadió Ramoncete."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 2" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Span Foreground="#FF222222" Language="es-ve"><Run Text="- ¡No puedo creerlo! - exclamó sorprendido el tendero- ¿Aún no te he contado mi secreto?"/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Entonces don Mostrocho tomó el libro que estaba leyendo y se lo enseñó a Ramoncete."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- ¿Qué ves aquí?"/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="El niño comenzó a leer con cierta dificultad y desgana."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- ¡No, no! , así no. Tienes que mirarlo todo. Si quieres puedes alejártelo un poco, o incluso darle la vuelta. "/></Span><Span Foreground="#FF222222" Language="en-us"><Run Text="¿No ves algo diferente?"/></Span><LineBreak/><Span Foreground="#FF222222" Language="en-us"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Al momento Ramoncete lo vio: ¡las líneas y letras de aquella página formaban un gran dibujo que le recordaba a un dinosaurio!, y una enorme sonrisa se dibujó en su cara. Comenzó a pasar las hojas y descubrió muchas otras figuras en cada página, según se largaban y acortaban las líneas, al derecho, de lado y al revés, y sin dejar de imaginarse que podían ser monstruos, animales o fantasmas."/></Span></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 3" HorizontalAlignment="Left" Height="39.4733333333333" VerticalAlignment="Top" Width="108.273333333333">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" Language="es-ve" Text="&#x9;"/><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- Ahora ya sabes cómo invento tantos monstruos- dijo don Mostrocho guiñándole un ojo."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="- Lo único que tienes que hacer es leer la página, y luego mirarla para descubrir el monstruo que esconde. ¿Sabías que casi todas tienen algo especial? sólo hay que saber verlo."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Ramoncete se despidió ilusionado con su nuevo descubrimiento, y desde aquel momento era raro no encontrarle con un libro en la mano, buscando las figuras que escondía, y sin siquiera darse cuenta de las miles de cosas nuevas que aprendía, cada día, a través de sus libros."/></Span></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
+		<local:UserControl1 x:Name="LibroPizarra" HorizontalAlignment="Left" Margin="132.137,311.219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/pizarramagica.png"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Controls:MetroAnimatedTabControl x:Name="PaginaPizarra" HorizontalAlignment="Left" Margin="359.428,10,0,0" VerticalAlignment="Top" Width="487.572" Height="562" TabStripPlacement="Bottom" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516" FontFamily="Segoe UI 8"><Span Foreground="#FF222222" Language="es-ve"><Run Text="&#x9;Iba una vez un niño caminando por un bosque, cuando sobre un viejo árbol encontró una gran pizarra, con una caja de tizas de cuyas puntas salían brillantes chispas. El niño tomó una de las tizas y comenzó a dibujar: primero un árbol, luego un conejo, luego una flor."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run Text="Mágicamente, en cuanto terminaba cada figura, ésta cobraba vida saliendo de la pizarra, así que en un momento aquel lugar se convirtió en un estupendo bosque verde, lleno de animales que jugaban divertidos. Emocionado, el niño dibujó también a sus padres y hermanos disfrutando de un día de picnic, con sus bocadillos y chuletas, y dibujó también los papeles de plata y las latas de sardinas abandonadas en el suelo, como solían hacer."/></Span><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Pero cuando los desperdicios cobraron vida, sucedió algo terrible: alrededor de cada papel y cada lata, el bosque iba enfermando y volviéndose de color gris, y el color gris comenzó a extenderse rápidamente a todo: al césped, a las flores, a los animales... "/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 2" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Span Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve"><Run Text="&#x9;El niño se dio cuenta de que todo aquello lo provocaban los desperdicios, así que corrió por el bosque con el borrador en la mano para borrarlos allá donde habían caído. Tuvo suerte, y como fue rápido y no dejó ni un sólo desperdicio, el bosque y sus animales pudieron recuperarse y jugaron juntos y divertidos el resto del día."/></Span><LineBreak/><Span Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve"><Run/></Span><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="El niño no volvió a ver nunca más aquella pizarra, pero ahora, cada vez que va al campo con su familia, se acuerda de su aventura y es el primero en recoger todos los desperdicios, y en recordar a todos que cualquier cosa que dejen abandonada supondrá un gran daño para todos los animales."/><LineBreak/><Run/><LineBreak FontFamily="Segoe UI 8"/></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
+		<local:UserControl1 x:Name="LibroTio" HorizontalAlignment="Left" Margin="278.266,311.219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/Tiotigretioconejo.jpg"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Controls:MetroAnimatedTabControl x:Name="PaginaTio" HorizontalAlignment="Left" Margin="267.025,10,0,0" VerticalAlignment="Top" Width="579.975" Height="562" TabStripPlacement="Right" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516" FontFamily="Segoe UI 8"><Run Foreground="#FF222222" Language="es-ve" Text="&#x9;Tío Conejo escuchó entre la selva las torpes notas de un desmañado silbido y, de un salto, corrió a esconderse bajo la protección que le ofrecía el fresco e intrincado ramaje de un helecho silvestre."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Allí, inquieto y silencioso, en muda indagación, movió repetidamente las orejas. ¿Quién podría silbar así, entre la floresta?"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Las notas del silbido se apagaron y, más cercano, se oyó, en seguida, el áspero canto de una voz bronca y gangoza; era el mismo silbador que, ahora, cantaba."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Tío Conejo permaneció inmóvil: alzadas las orejas, muy abiertos los ojos, latiéndole fuertemente el corazón. Finalmente, a muy cortos pasos de él, allí, ante su asombro, se abrió un matorral espeso, del que surgió Tío Tigre."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Y cosa extraña la fiera traía muy risueña cara de complacencia y una gran mochila de cocuiza. vacía y doblada, bajo el brazo. Pasó, casi rozando el escondite de Tío Conejo, y luego siguió, cerro abajo, por entre los breñales; siempre gangueando su desagradable canción."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Tío Conejo, lleno de curiosidad, corrió a asomarse al borde del barranco."/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 2" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="&#x9;"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="&quot;¿Por qué estará tan contento Tío Tigre?&quot; -se dijo- &quot;¡Uhm! ¡Algo muy malo deberá estar pensando! ... ¡Voy a seguirlo, a ver!&quot; "/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Y el simpático v vivaracho roedor se fue, también, pendiente abajo, haciendo brincar la blanca mota de su cola, al correr, veloz, por el camino de las huellas que dejara Tío Tigre."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Tío Rabipelado, después de beber agua allá abajo, en el pocito fresco de la quebrada, subía, poco a poco y cuesta arriba, cuando de manos a boca, se encontró con Tío Mapurite, y como éste, amenazante levantara la cola, dispuesto a la defensa, ante el horror de aquel peligro, el rabípelado se llenó de espanto y saludó, lisonjero:"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="-¡Señor don Mapuríflor, flor de las flores, olor de los olores!"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="-¿Cómo está esa bella persona?"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="El Mapurite sonrió, complacido, y después de contestar el saludo, cortésmente, agregó:"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="-Pase, pase usted, don Ramón Pila, y que le vaya muy bien-. Y se apartó a un lado."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="-Chí-, dijo el marsupial, y siguió su camino."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve"/><LineBreak/><Run/><LineBreak FontFamily="Segoe UI 8"/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 3" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="&#x9;"/><LineBreak/><Run Text="A poco, ante Tio Rabípelado. desembocó de pronto Tío Tigre."/><LineBreak/><Run/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-¡Señor don Tigre, Tigrón! -lo saludó, haciendo una profunda reverencia- ¡Sabio, como él solo y mil veces más valiente que Tío León!"/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-¡Ja, Ja, Ja! -rió Tío Tigre- Este Ramón Pilá, siempre con sus cosas... ¡Ah, Ramón Pilá, me vas a hacer un servicio!"/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-Como no, Tío Tigre; lo que usted mande."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-Bueno. Mira; allá detrás de la casa, dejé unas verduras para un sancocho; &quot;vémelas&quot; pelando, que yo subo dentro de un ratico con la carne."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-Chí- dijo el rabípelado. Y echó a andar apresuradamente."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="Tío Tigre se quedó mirándolo, y agregó, en tono amenazador:"/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-Pero, ten cuidado con desordenarme nada de lo que allí tengo, porque, si no .. ¡Ya sabes!..."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="Un corto trecho más arriba. Tío Rabípelado por poco se tropieza con Tío Conejo, que venía bajando. Ambos dieron un salto, asustados."/><LineBreak/><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="-¡Epoca!. .. ¡Gua; pero si es Tío Ramón Pilá! gritó, riendo, Tío Conejo."/><LineBreak/><Run/><LineBreak FontFamily="Segoe UI 8"/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 4" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" FontFamily="Segoe UI 8" Language="es-ve" Text="&#x9;"/><LineBreak/><Run Text="Y Tío Rabipelado, que consideraba un animalillo demasiado inofensivo a Tío Conejo, quiso alardear ante él y exclamó, mostrándose agraviado:"/><LineBreak/><Run/><LineBreak/><Run Text="-¡Herria! ¡Me tuvieron chiquito porque grande no pudieron!- Y se hizo a un lado, molesto."/><LineBreak/><Run Text="-¡Gua, gua, gua!- murmuró Tío Conejo, entre sorprendido y burlón."/><LineBreak/><Run Text="-¡Apártese, compañero, no ve que ando apurado! ¡Voy en una comisión de mi amigo Tío Tigre! ¡Herria!."/><LineBreak/><Run Text="Y, engreído, el animale]o siguió su camino y desapareció, cerro arriba, entre los yerbajos."/><LineBreak/><Run Text="A fin de recuperar el tiempo allí perdido con Tío Rabipelado. Tío Conejo echó a correr para alcanzar a Tío Tigre."/><LineBreak/><Run Text="Llegó al borde de la barranca de la quebrada y, en ese momento, vio que la fiera comenzaba a entrar en la playa del arroyuelo."/><LineBreak/><Run Text="Tío Tigre avanzó unos pasos y se detuvo ante un morrocoy que, vuelto de espaldas sobre la arena, movía las patas, angustiado, en un inútil y desesperado esfuerzo por enderezarse."/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 5" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run/><LineBreak/><Run Text="-¡Vagabundo, veo que no has podido moverte del sitio en que te dejé! ¡Está muy bueno! Ahora si te podré llevar; para eso traigo esta mochila."/><LineBreak FontFamily="Segoe UI 8"/><LineBreak/><Run Text="Y, terminando de hablar, la fiera metió el morrocoy en el saco, se lo echó al hombro y emprendió el camino de regreso. Mientras subía la cuesta, siguió hablando, burlón:"/><LineBreak/><Run/><LineBreak/><Run Text="-¡Hasta hoy duraste, Tío Morrocoy! Allá te espera, en la casa, una buena mano de pilón, y después, la olla del sancocho. ¡Ya verás!"/><LineBreak/><Run Text="Tío Conejo se llenó de indignación. ¡Qué ese bandido de Mano de Plomo fuera a hacer eso con su buen amigo Tío Morrocoy!... ¡No: él no lo permitiría!. .. Pensó un rato y luego echó a correr cerro arriba, también. Llegaría mucho antes que Tío Tigre, quién tenía que ir muy lentamente, por el peso de la carga que llevaba."/><LineBreak/><Run Text="Entre el monte, apenas unos cuantos pasos antes de desembocar en el patio de la casa de la fiera, Tío Conejo se detuvo; había escuchado algo así como un llanto."/><LineBreak/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 6" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run/><LineBreak/><Run Text="-¡Hi, hi, hi!- volvió a oírse. Era un gemido desconsolador; aquello parecía la voz de Tío Rabipelado."/><LineBreak/><Run Text="¿Quién está allí? -preguntó Tío Conejo- ¿Cómo que es Tío Ramón Pilá?"/><LineBreak/><Run Text="-Chí- respondió la vocecita."/><LineBreak/><Run Text="Tío Conejo buscó y encontró una trampa, en la que estaba metido el rabipelado."/><LineBreak/><Run Text="-¡Ah carrizo, Ramón Pilá! ¡Caíste en esa trampa!"/><LineBreak/><Run Text="-Chí."/><LineBreak/><Run Text="-¿Y tú quieres que yo te saque?"/><LineBreak/><Run Text="-Chí."/><LineBreak/><Run Text="-Bueno, pues, vamos a hacerla."/><LineBreak/><Run Text="Y Tío Conejo puso en libertad al prisionero."/><LineBreak/><Run Text="En eso Tío Tigre desembocó frente a la casa y empezó a llamar, a gritos, al rabipelado. El cual, allí junto a Tío Conejo, se dio a llorar amargamente."/><LineBreak/><Run Text="-¡Ahora Tío Tigre me va a comer -dijo- porque le tumbé una de sus trampas! ¡Sálveme, Tío Conejo!"/><LineBreak/><Run Text="Tío Tigre puso el saco, con el morrocoy dentro, en el suelo, y siguió dando gritos:"/><LineBreak/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 7" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Text="-¡Ah, Ramón Pilá! ... ¡Ramón Pilál. .. ¿Qué se habrá hecho ese condenado?"/><LineBreak/><Run Text="Al ver el saco en tierra, a Tío Conejo se le ocurrió una idea, y dijo al rabipelado:"/><LineBreak/><Run Text="-Bueno. Yo te salvaré; pero eso sí, tienes que hacer lo que te diga."/><LineBreak/><Run Text="-Chí."/><LineBreak/><Run Text="-Sal, entonces, y haz que Tío Tigre entre en la casa, para que yo pueda sacar del saco, y traerme a Tío Morrocoy."/><LineBreak/><Run Text="Sin esperar más, Tío Rabipelado salió del monte y avanzó hasta Tío Tigre."/><LineBreak/><Run Text="-¡Tío Tigrito, Tío Tigrito -le dijo;- unos ladrones se están robando las verduras!."/><LineBreak/><Run Text="La fiera iba a insultar al rabipelado, pero al oír aquello, salió en carrera y desapareció detrás de la casa."/><LineBreak/><Run Text="Tío Conejo indicó a Ramón Pilá un gran avispero gris que se balanceaba en la rama de un árbol. -¡Sube, rápido, allá arriba y tráeme aquel matajeyl"/><LineBreak/><Run Text="-¿Y si me pican las avispas?"/><LineBreak/><Run Text="-¡Sube, hombre! ¡Tapas bien la boca del avispero con un puñado de hojas! ¡Anda, ligerol..."/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 8" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run/><LineBreak/><Run Text="En un momento el rabipelado trepó hasta lo alto y regresó con el avispero ella mano. Lo entregó a Tío Conejo y éste lo tomó con cuidado, y corrió a ponerlo dentro del saco, en lugar de Tío Morrocoy."/><LineBreak/><Run Text="Al cabo de unos momentos, los tres: Tío Conejo, Tío Morrocoy y Tío Rabipelado, aguardaban escondidos en el borde de la selva, mirando hacia la vivienda de Tío Tigre, quien, al fin, regresó de atrás de la casa e, indignado, llamó al rabipelado."/><LineBreak/><Run Text="-¡Vagabundo! -rugió- ¿Dónde se metería? ¡Me ha engañado! Nadie se estaba robando mis verduras. ¡Déjelo quieto, cuando lo encuentre, él va a saber lo que es bueno!"/><LineBreak/><Run Text="En seguida cogió el saco con el avispero dentro y se lo llevó al interior de la casa. Ya tenía el agua hirviendo, y echó las verduras y los aliños entre la olla. Buscó la mano de pilón que, admirablemente, serviría de cachiporra, y con ella golpeó salvajemente el saco, hasta deshacer el avispero que contenía."/><LineBreak/><Run Text="-Qué blandito era ese Tío Morrocoy -murmuró-. Mejor; así el sancocho estará más pronto."/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 9" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Language="es-ve" Text="&#x9;"/><Run Text="Se acercó al fogón y vació el saco junto a sus propios pies. Inmediatamente las avispas, embravecidas, lo rodearon en una espesa nube, y comenzaron a clavarle sus terribles aguijones."/><LineBreak/><Run Text="Lanzando espantosos alaridos de dolor, la fiera corrió afuera, se revolcó en el patio, desesperadamente, y luego huyó bosque adentro, despavorida."/><LineBreak/><Run Text="Tío Conejo, Tío Morrocoy y Ramón Pilá, a todas estas, reventaban de risa, allí, en la orilla de la selva."/><LineBreak/><Run Text=" "/><LineBreak/><Run Text="¡Y colorín colora'o este cuento se ha termina'o!"/></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
+		<local:UserControl1 x:Name="LibroPatito" HorizontalAlignment="Left" Margin="433.138,311.219,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5">
+			<i:Interaction.Behaviors>
+				<ei:MouseDragElementBehavior ConstrainToParentBounds="True"/>
+			</i:Interaction.Behaviors>
+			<local:UserControl1.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</local:UserControl1.RenderTransform>
+			<local:UserControl1.Background>
+				<ImageBrush ImageSource="imagenes/patitofeo.jpg"/>
+			</local:UserControl1.Background>
+		</local:UserControl1>
+		<Controls:MetroAnimatedTabControl x:Name="PaginasPatito" HorizontalAlignment="Left" Margin="359.428,10,0,0" VerticalAlignment="Top" Width="487.572" Height="562" TabStripPlacement="Bottom" Visibility="Collapsed">
+			<TabItem Header="Pág. 1">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" Language="es-ve" Text="&#x9;Había una vez una señora pata que puso muchos huevos, pero uno era completamente distinto, tenía un sinnúmero de manchitas como lunares, en cambio los otros eran de un solo color, sin manchas ni imperfecciones."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Cuando se rompieron los cascarones, el patito que salió de ese huevo, lucia diferente, tenía la cabeza más grande, medía un centímetro más que sus hermanos y sus plumas eran oscuras."/><LineBreak/><Span Foreground="#FF222222" Language="es-ve"><Run/></Span><LineBreak/><Run Text="Como todos se burlaban de su aspecto, hasta sus hermanos, porque no nadaba ni caminaba como los demás, era torpe y se veía muy feo, su padre se peleaba con todos por defenderlo y por más que corregía a sus hermanos, estos lo miraban como a un extraterrestre."/><LineBreak/><Run/><LineBreak/><Run Text="Fue así que el patito decidió irse para que nadie se burle de él. Una mañana hizo un atadito con su ropa y se marchó. Su madre no comprendía por qué este hijo era diferente y lamentó mucho su partida, porque conocía su buen corazón y su tristeza, pero también entendía que su hijo necesitaba encontrar un buen lugar en este mundo para ser feliz."/></TextBlock>
+				</Grid>
+			</TabItem>
+			<TabItem Header="pág. 2" HorizontalAlignment="Left" Height="39.473" VerticalAlignment="Top" Width="88.29">
+				<Grid Background="#FFE5E5E5">
+					<TextBlock HorizontalAlignment="Left" Margin="32.481,45.011,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="445.091" TextOptions.TextHintingMode="Animated" TextAlignment="Justify" FontSize="16" Height="477.516"><Run Foreground="#FF222222" Language="es-ve" Text="&#x9;Así el patito feo recorrió muchos sitios y todos a su paso se burlaban de su aspecto, hasta que se encontró con el paisaje más bello que había visto en toda su vida y eso que había conocido muchos lugares en su recorrido. Llegó a una laguna donde nadaban unas aves majestuosas y bellas entre flores y plantas acuáticas de aromas dulces y colores hermosos. Eran tan admiradas por su belleza que posaban para los pintores más famosos del lugar y curiosamente invitaron al patito feo a nadar."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Sin pensarlo dos veces, el patito se metió en la laguna, y mientras corría al encuentro de estos cisnes blancos como la nieve, sus feas plumas se caían y cambiaban por plumas nuevas hasta que se transformó en otro hermoso cisne blanco."/><LineBreak/><Run Foreground="#FF222222" Language="es-ve"/><LineBreak/><Run Foreground="#FF222222" Language="es-ve" Text="Y colorín colorado el patito feo, en un cisne bello se ha transformado . . ."/></TextBlock>
+				</Grid>
+			</TabItem>
+		</Controls:MetroAnimatedTabControl>
 
-    </Grid>
+	</Grid>
 </Controls:MetroWindow>

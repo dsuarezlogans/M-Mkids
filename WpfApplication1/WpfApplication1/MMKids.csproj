@@ -86,12 +86,19 @@
     <Compile Include="silabas.xaml.cs">
       <DependentUpon>silabas.xaml</DependentUpon>
     </Compile>
+    <Compile Include="UserControl1.xaml.cs">
+      <DependentUpon>UserControl1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="vocales.xaml.cs">
       <DependentUpon>vocales.xaml</DependentUpon>
     </Compile>
     <Page Include="abecedario.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EfectosMMKIDS.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
     </Page>
     <Page Include="Juego1.xaml">
       <SubType>Designer</SubType>
@@ -133,6 +140,10 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Page Include="UserControl1.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="vocales.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -170,6 +181,7 @@
     <AppDesigner Include="Properties\" />
     <Resource Include="imagenes\appbar.home %282%29.png" />
     <Resource Include="imagenes\appbar.refresh.png" />
+    <Resource Include="imagenes\inventormonstruos.jpg" />
     <Resource Include="imagenes\jugar.png" />
     <Resource Include="Resources\Entypo.ttf" />
   </ItemGroup>
@@ -256,6 +268,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="imagenes\piece600altfull.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\Tiotigretioconejo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\Elviejoperrocazador.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\conejitofeo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\patitofeo.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="imagenes\pizarramagica.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

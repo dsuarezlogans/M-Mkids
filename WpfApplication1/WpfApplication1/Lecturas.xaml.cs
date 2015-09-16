@@ -22,7 +22,9 @@ namespace MMKids
     {
         public Lecturas()
         {
+            
             InitializeComponent();
         }
+        
     }
 }
